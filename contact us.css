@@ -1,26 +1,37 @@
 .stff {
-    display: flex;
-    justify-content: 10px;
-    width: 100%;
-    position: fixed;
-    gap: 20px;
-    /* border: solid 1px black; */
-    /* border-radius: 40px; */
-    text-align: center;
-    color: white;
-    background-color: rgb(15, 172, 15);
-    padding: 15px;
-  }
-  
-  .stff a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 24px;
-  }
+  display: flex;
+  justify-content: center;
+  width: 1310px;
+  position: fixed;
+  gap: 20px;
+  border-radius: 100px;
+  text-align: center;
+  color: white;
+  background-color: rgb(15, 172, 15);
+  padding: 10px;
+  margin-left: 60px;
+  height: 80px;
+}
+
+.stff.square {
+  border-radius: 0;
+}
+
+.stff a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.stff img {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+}
 
 * {
   box-sizing: border-box;
@@ -32,10 +43,15 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: green;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   margin-bottom: 0.5em;
 }
@@ -70,7 +86,8 @@ p {
   text-align: center;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -88,7 +105,6 @@ a:hover {
 /* Header Styles */
 
 header {
-  background-color: #333;
   color: #fff;
   padding: 1em;
   text-align: center;
@@ -116,7 +132,7 @@ header nav a {
 }
 
 .hero {
-  background-image: url('./ogo1.jpg');
+  background-image: url("./ogo3.jpg");
   background-size: cover;
   height: 300px;
   display: flex;
@@ -134,6 +150,8 @@ header nav a {
   background-color: #f7f7f7;
   border: 1px solid #ddd;
   margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .contact-info ul {
@@ -149,12 +167,13 @@ header nav a {
   font-weight: bold;
 }
 
-
 .contact-form {
   padding: 2em;
   background-color: #f7f7f7;
   border: 1px solid #ddd;
   margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .contact-form form {
@@ -166,7 +185,8 @@ header nav a {
   margin-bottom: 10px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -184,7 +204,6 @@ header nav a {
 .contact-form input[type="submit"]:hover {
   background-color: green;
 }
-
 
 .social-media {
   padding: 2em;
@@ -211,9 +230,8 @@ header nav a {
   color: black;
 }
 
-
 footer {
-  background-color: #333;
+  background-color: green;
   color: #fff;
   padding: 1em;
   text-align: center;
@@ -234,21 +252,22 @@ footer a {
   color: #fff;
 }
 
-
 @media only screen and (max-width: 768px) {
   header nav {
     flex-direction: column;
   }
-  
+
   header nav ul {
     flex-direction: column;
   }
-  
+
   .hero {
     height: 200px;
   }
-  
-  .contact-info, .contact-form, .social-media {
+
+  .contact-info,
+  .contact-form,
+  .social-media {
     margin-bottom: 10px;
   }
 }
@@ -258,4 +277,3 @@ footer a {
     height: 150px;
   }
 }
-  

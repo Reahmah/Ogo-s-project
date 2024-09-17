@@ -1,23 +1,34 @@
 .stff {
-    display: flex;
-    justify-content: 10px;
-    width: 100%;
-    position: fixed;
-    gap: 20px;
-    /* border: solid 1px black; */
-    /* border-radius: 40px; */
-    text-align: center;
-    color: white;
-    background-color: rgb(15, 172, 15);
-    padding: 15px;
-  }
-  
-  .stff a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 24px;
-  }
+  display: flex;
+  justify-content: center;
+  width: 1310px;
+  position: fixed;
+  gap: 20px;
+  border-radius: 100px;
+  text-align: center;
+  color: white;
+  background-color: rgb(15, 172, 15);
+  padding: 10px;
+  margin-left: 60px;
+  height: 80px;
+}
+
+.stff.square {
+  border-radius: 0;
+}
+
+.stff a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.stff img {
+  width: 150px;
+  height: 200px;
+  margin-right: 20px;
+}

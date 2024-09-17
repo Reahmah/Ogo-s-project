@@ -1,26 +1,43 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+const stff = document.querySelector(".stff");
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    navbar.classList.add("square");
+  } else {
+    navbar.classList.remove("square");
+  }
+});
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+const slides = document.querySelectorAll(".slide");
+
+let currentSlideIndex = 0;
+
+prevButton.addEventListener("click", () => {
+  currentSlideIndex--;
+  if (currentSlideIndex < 0) {
+    currentSlideIndex = slides.length - 1;
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+  updateSlides();
+});
+
+nextButton.addEventListener("click", () => {
+  currentSlideIndex++;
+  if (currentSlideIndex >= slides.length) {
+    currentSlideIndex = 0;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  updateSlides();
+});
+
+function updateSlides() {
+  slides.forEach((slide, index) => {
+    if (index === currentSlideIndex) {
+      slide.style.display = "block";
+    } else {
+      slide.style.display = "none";
+    }
+  });
 }
